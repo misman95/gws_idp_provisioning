@@ -8,16 +8,22 @@ Google Workspace / Cloud Identity 사용자·그룹을 Admin SDK Directory API�
 
 ## Google 설정
 
-1. Cloud Console에서 [Admin SDK API](https://console.cloud.google.com/apis/library/admin.googleapis.com) Enable
+1. Cloud Console에서 [Admin SDK API](https://console.cloud.google.com/apis/library/admin.googleapis.com) 를 활성화합니다.
 2. 서비스 계정 JSON 키를 프로젝트 폴더에 둡니다
 3. Admin Console → **Security → Access and data control → API controls → Manage Domain Wide Delegation**
-4. JSON의 `client_id`(숫자)를 넣고 스코프:
+4. JSON의 `client_id`(숫자)를 넣고 `OAuths copes` 에 다듬을 입력합니다.
 
 ```
 https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.group.readonly,https://www.googleapis.com/auth/admin.directory.group.member.readonly
 ```
 
 5. `.env`의 `GOOGLE_ADMIN_EMAIL`은 사용자/그룹 읽기 권한이 있는 관리자여야 합니다
+
+```bash
+cp .env.example .env
+```
+
+`.env`와 서비스 계정 JSON은 git에 올리지 마세요.
 
 ## Netskope
 
