@@ -3,7 +3,7 @@
 Google Workspace / Cloud Identity 사용자·그룹을 Admin SDK Directory API로 읽고, Netskope SCIM v2로 테넌트에 동기화합니다. Google에서 삭제된 그룹/사용자는 다음 실행 때 Netskope에서도 삭제합니다.
 
 ```
-[Google Workspace] ──(Admin SDK)──> [provisioning.py] ──(REST API v2 SCIM)──> [Netskope]
+[Google Workspace] ──(Admin SDK)──→ [provisioning.py] ──(REST API v2 SCIM)──→ [Netskope]
 ```
 
 ## Google 설정
@@ -11,7 +11,7 @@ Google Workspace / Cloud Identity 사용자·그룹을 Admin SDK Directory API�
 1. Cloud Console에서 [Admin SDK API](https://console.cloud.google.com/apis/library/admin.googleapis.com) 를 활성화합니다.
 2. 서비스 계정 JSON 키를 프로젝트 폴더에 둡니다
 3. Admin Console → **Security → Access and data control → API controls → Manage Domain Wide Delegation**
-4. JSON의 `client_id`(숫자)를 넣고 `OAuths copes` 에 다듬을 입력합니다.
+4. JSON의 `client_id`(숫자)를 넣고 **OAuth scopes**에 다음을 입력합니다.
 
 ```
 https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.googleapis.com/auth/admin.directory.group.readonly,https://www.googleapis.com/auth/admin.directory.group.member.readonly
