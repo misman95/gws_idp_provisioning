@@ -25,8 +25,6 @@ https://www.googleapis.com/auth/admin.directory.user.readonly,https://www.google
 cp .env.example .env
 ```
 
-`.env`와 서비스 계정 JSON은 git에 올리지 마세요.
-
 ## Netskope
 
 Settings → Tools → REST API v2 토큰에 `/api/v2/scim/Users`, `/api/v2/scim/Groups` **Read + Write** (DELETE 포함).
