@@ -2,8 +2,10 @@
 
 Google Workspace / Cloud Identity 사용자·그룹을 Admin SDK Directory API로 읽고, Netskope SCIM v2로 테넌트에 동기화합니다. Google에서 삭제된 그룹/사용자는 다음 실행 때 Netskope에서도 삭제합니다.
 
-```
-[Google Workspace] ──(Admin SDK)──→ [provisioning.py] ──(REST API v2 SCIM)──→ [Netskope]
+```mermaid
+flowchart LR
+  GWS["Google Workspace"] -->|"Admin SDK"| APP["provisioning.py"]
+  APP -->|"REST API v2 SCIM"| NS["Netskope"]
 ```
 
 ## Google 설정
