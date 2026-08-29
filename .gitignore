@@ -1,0 +1,15 @@
+.env
+service_account.json
+charged-sum-*.json
+*-credentials.json
+sync_state.json
+certs/
+*.crt
+*.key
+*.zip
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+*.log
